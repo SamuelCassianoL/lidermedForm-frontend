@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       await auth.loginUser(email, password);
       // sucesso: redireciona
-      window.location.href = '/html/gerenciarEmpresas.html';
+      window.location.href = '/gerenciarEmpresas.html';
     } catch (error) {
       // monta mensagem de erro
       let textoErro;

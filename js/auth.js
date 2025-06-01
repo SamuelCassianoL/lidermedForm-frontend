@@ -20,7 +20,7 @@
 
     function logoutUser() {
         clearTokens();
-        window.location.href = '/html/index.html';
+        window.location.href = '/index.html';
     }
 
     function showModal(message, type = 'errorModal') {
@@ -168,7 +168,7 @@ async function authFetch(url, options = {}, { suppress400 = false } = {}) {
 
     function requireAuth() {
         if (!isAuthenticated()) {
-            window.location.href = '/html/login.html';
+            window.location.href = '/index.html';
         }
     }
 
