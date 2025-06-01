@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* Reset básico */
+* {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de tema */
+:root {
+  --body-color: #fff;
+  --leftbar-color: #52CADA;
+  --leftbar-color-mobile: #52CADA;
+  --primary-color: #FFFFFF;
+  --primary-color-light: #39A7A5;
+  --toggle-color: #aaa;
+  --text-color: #FFFFFF;
+  --tran-02: 0.2s ease;
+  --tran-03: 0.3s ease;
+  --tran-04: 0.4s ease;
+  --tran-05: 0.5s ease;
+}
+
+/* Estilo do body */
+body {
+  height: 100%;
+  background: var(--body-color);
+  transition: var(--tran-05);
+  overflow-x: hidden;
+}
+
+/* Estilo principal da sidebar */
+.leftbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background: var(--color-2);
+  transition: var(--tran-05);
+  z-index: 100;
+  padding-top: 3%;
+}
+
+/* Logo da sidebar */
+.leftbar img {
+  width: 3.5rem;
+  color: var(--color-3);
+}
+
+/* Sidebar fechada */
+.leftbar.close {
+  width: 88px;
+}
+
+/* Texto da sidebar */
+.leftbar .text {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-3);
+  transition: var(--tran-03);
+  white-space: nowrap;
+  opacity: 1;
+}
+
+.leftbar.close .text {
+  display: none;
+}
+
+/* Itens de lista do menu */
+.leftbar li {
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.leftbar:not(.close) li :not(.mode) {
+  margin-right: 13px;
+}
+
+/* Ícones dos itens */
+.leftbar li .icon {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+}
+
+/* Cores dos ícones e textos */
+.leftbar li .icon,
+.leftbar li .text {
+  color: var(--color-3);
+  transition: var(--tran-02);
+}
+
+/* Botão de toggle (menu hamburguer) */
+.leftbar .box {
+  position: relative;
+}
+
+.leftbar .box .toggle {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
+  height: 47px;
+  width: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-3);
+  font-size: 47px;
+  transition: var(--tran-03);
+  cursor: pointer;
+}
+
+.leftbar.close .box .toggle {
+  transform: translateY(-50%);
+}
+
+/* Container que segura o menu e o logo/config */
+.leftbar .menu-bar {
+  height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 🔧 Centraliza verticalmente */
+}
+
+/* Bloco do menu (ul + li) */
+.leftbar .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  /* 🔧 Ocupa espaço disponível para centralização */
+}
+
+/* Lista de links */
+.leftbar .menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  justify-content: center;
+  /* 🔧 Centraliza verticalmente os links */
+}
+
+/* Estilo dos links */
+.leftbar li a {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 3px;
+  transition: var(--tran-04);
+}
+
+/* Hover dos links */
+.leftbar li a:hover {
+  background: var(--color-1);
+}
+
+.leftbar li a:hover .icon,
+.leftbar li a:hover .text {
+  color: var(--color-3);
+}
+
+/* Espaço entre menu e parte inferior */
+.leftbar.close .menu-bar .mode {
+  border-radius: 10px;
+  position: relative;
+}
+
+.menu-bar .mode {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+/* Texto de config */
+.config .mode-text {
+  display: inline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .leftbar.close {
+    width: 80px;
+  }
+
+  .leftbar li .icon {
+    min-width: 45px;
+    font-size: 20px;
+  }
+
+  .leftbar .box .toggle {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .leftbar.close {
+    width: 60px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 997;
+  }
+
+  .leftbar.close .text {
+    display: none;
+  }
+
+  .leftbar.close .icon {
+    display: none;
+  }
+
+  .leftbar {
+    height: 100%;
+    width: 100%;
+    background: var(--color-2);
+    z-index: 1000;
+  }
+
+  .nav-link {
+    padding-left: 25%;
+  }
+
+  .config .mode-text {
+    display: none;
+  }
+
+  .leftbar li .icon {
+    font-size: 25px;
+  }
+
+  .leftbar .text {
+    font-size: 25px;
+  }
+
+  .leftbar.close .box .toggle {
+    font-size: 65px;
+  }
+
+  .leftbar .box .toggle {
+    position: relative;
+    top: 15px;
+    height: 50px;
+    width: 50px;
+    font-size: 65px;
+  }
+}
+
+.toggle-message {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  /* coloca à esquerda */
+  transform: translateY(-50%);
+  color: #333;
+  padding: 8px 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+  border-bottom: 1.5px solid white;
+  width: 75%;
+}
+
+.toggle-message.show {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* preto com baixa opacidade */
+  z-index: 90;
+  /* abaixo da sidebar que está com z-index: 100 */
+  display: none;
+  /* começa escondido */
+  transition: opacity 0.3s ease;
+}
+
+/* Quando a sidebar estiver aberta (sem .close), mostra a overlay */
+.leftbar:not(.close)~.overlay {
+  display: block;
+}

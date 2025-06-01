@@ -1,0 +1,384 @@
+:root {
+    --color-1: #43A7A5;
+    --color-2: #52CADA;
+    --color-3: #EFFAFD;
+    --color-4: #237775;
+    --color-5: #011212;
+    --tran-02: 0.2s ease;
+    --tran-03: 0.3s ease;
+    --tran-04: 0.4s ease;
+    --tran-05: 0.5s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+  }
+  
+  body {
+    background-color: var(--color-3);
+    padding: 20px;
+  }
+
+
+  /* -- ESTILIZAÇÃO CABEÇALHO */
+  header{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .right-titleheader{
+    font-size: 25px;
+    font-weight: 350;
+    color: var(--color-4);
+  }
+
+  .left-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .expiration-left{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .text-expirationleft{
+    color: var(--color-4);
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .value-expirationleft{
+    color: var(--color-4);
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .division{
+    width: 1.7px;
+    height: 40px;
+    background-color: var(--color-1);
+  }
+
+  .company-left{
+    color: var(--color-1);
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+
+
+  /* TÍTULO E DESCRIÇÃO */
+  .titulo-pesquisa{
+    color: #43A7A5;
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  .descricao-pesquisa{
+    color: var(--color-4);
+    font-size: 18px;
+    width: 70%;
+  }
+
+
+
+/* NÚMERAÇÃO */
+.numeracao-perguntas{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+  .item-numeracaoperguntas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-3);
+    background-color: #43A7A5;
+    border-radius: 15px;
+    width: 140px;
+    height: 80px;
+    font-size: 25px;
+  }
+
+  .valor-itemnumeracao{
+    font-weight: 300;
+    font-size: 17px;
+  }
+
+
+
+/* PERGUNTAS */
+.bloco-secao{
+    padding: 30px 0px 0px 0px;
+}
+
+.titulo-secao{
+    color: var(--color-4);
+    font-size: 40px;
+    width: 80%;
+}
+
+.descricao-secao{
+    color: var(--color-5);
+    font-size: 20px;
+    width: 80%;
+}
+
+.textarea-question{
+    height: 80px;
+    width: 350px;
+    background-color: var(--color-3);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    box-shadow: #010c0c60 2px 1px 10px 1px;
+}
+
+.textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.contador-caracteres {
+  font-size: 12px;
+  color: var(--color-3);
+  text-align: right;
+  margin-top: 4px;
+}
+
+.container-question {
+    background-color: var(--color-1);
+    margin: 50px 40px 20px 30px;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-shadow: #010c0c60 2px 1px 10px 1px;
+}
+
+ .value-question{
+    color: var(--color-3);
+    font-size: 30px;
+    font-weight: 700;
+    width: 70%;
+ }
+
+  .botoes-multipla-escolha {
+    display: flex;
+    background-color: var(--color-3);
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .btn-opcao {
+    padding: 20px 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--color-4);
+    font-size: 22px;
+    font-weight: 900;
+  }
+  
+  .btn-opcao.selecionado {
+    background-color: var(--color-4);
+    color: var(--color-3);
+    border-color: none;
+    border-radius: 10px;
+  }
+
+
+  /* BOTÃO ENVIAR */
+  .btn-enviar-respostas{
+    margin: 50px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-4);
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+
+  /* MODAL RESPOSTAS SERVER */
+  .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background-color: var(--color-3);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-box p {
+  font-size: 18px;
+  color: var(--color-4);
+  margin-bottom: 20px;
+}
+
+
+.modal-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color-1);
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+  
+
+
+
+/* Erro de resolução */
+  .error {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: var(--color-3);
+    color: var(--color-5);
+    padding: 10px;
+  }
+
+  .logo-erro img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+   .value-question{
+    font-size: 20px;
+    width: 60%;
+ }
+  
+  .btn-opcao {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+  
+}
+
+@media (max-width: 700px) {
+
+  body{
+    padding: 10px;
+  }
+
+  .right-titleheader{
+    font-size: 18px;
+  }
+
+  .right-titleheader{
+    font-size: 20px;
+  }
+
+  .text-expirationleft{
+    font-size: 10px;
+  }
+
+  .value-expirationleft{
+    font-size: 16px;
+  }
+
+  .division{
+    width: 1.0px;
+    height: 30px;
+  }
+
+  .company-left{
+    color: var(--color-1);
+    font-size: 20px;
+  }
+
+  .numeracao-perguntas{
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+}
+
+  .item-numeracaoperguntas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-3);
+    background-color: #43A7A5;
+    border-radius: 15px;
+    font-size: 18px;
+    width: 95px;
+    height: 80px;
+  }
+
+  .valor-itemnumeracao{
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .titulo-secao{
+    font-size: 25px;
+    width: 100%;
+}
+
+.descricao-secao{
+    font-size: 18px;
+    width: 100%;
+}
+
+ .value-question{
+    font-size: 18px;
+    width: 100%;
+ }
+
+ .container-question {
+    flex-direction: column;
+    text-align: center;
+}
+}
+
+@media (max-width: 500px) {
+  .all-main {
+    display: none;
+  }
+
+  .error {
+    display: flex;
+  }
+}

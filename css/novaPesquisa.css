@@ -1,0 +1,794 @@
+:root {
+  --color-1: #43A7A5;
+  --color-2: #52CADA;
+  --color-3: #EFFAFD;
+  --color-4: #237775;
+  --color-5: #011212;
+  --tran-02: 0.2s ease;
+  --tran-03: 0.3s ease;
+  --tran-04: 0.4s ease;
+  --tran-05: 0.5s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: var(--color-3);
+  display: flex;
+  justify-content: start;
+}
+
+.container {
+  margin-top: 20px;
+  margin-left: 120px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 70px;
+  color: var(--color-1);
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: var(--color-5);
+}
+
+hr {
+  margin: 40px;
+}
+
+.form-container {
+  background-color: var(--color-1);
+  color: var(--color-3);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.form-container h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.form-container p {
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: var(--color-3);
+}
+
+form {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--color-3);
+  color: var(--color-1);
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+}
+
+button:hover {
+  background-color: var(--color-3);
+}
+
+.logo {
+  position: fixed;  
+  bottom: 40px;        
+  right: 40px;         
+  z-index: 100;        
+}
+
+.logo img {
+  width: 40px;         
+}
+
+.logo-erro {
+  margin-top: 40px;
+}
+
+
+.logo-erro img {
+  width: 40px;
+}
+
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.left {
+  width: 40%;
+}
+
+.error {
+  display: none;
+  margin: auto;
+  text-align: center;
+}
+
+
+
+
+.empresa-item {
+  border-radius: 6px;
+  background-color: var(--color-3);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: var(--color-1);
+}
+
+
+.empresa-item:hover {
+  background-color: #43A7A5;
+}
+
+.empresa-item.selecionada {
+  background-color: #43A7A5;
+}
+
+
+
+/* CONTAINERS NOVA PESQUISA*/
+.content {
+  background-color: var(--color-1);
+  color: var(--color-3);
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 60px;
+  box-shadow: #010c0c57 1px 2px 10px 1px;
+}
+
+.content .left {
+  width: 60%;
+}
+
+.content .left h2 {
+  font-size: 60px;
+}
+
+.content .left p {
+  font-size: 18px;
+  color: var(--color-3);
+}
+
+.content .left button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--color-3);
+  color: var(--color-1);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.content .right {
+  background-color: var(--color-1);
+  width: 50%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  direction: ltr;
+  border-radius: 10px;
+  padding: 30px;
+  max-height: 250px;
+}
+
+.content .right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content .right::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.content .right::-webkit-scrollbar-thumb {
+  background-color: var(--color-3);
+  border-radius: 10px;
+  border: 2px solid var(--color-1); /* cria um espaçamento ao redor */
+}
+
+
+.empresa-item {
+  background-color: var(--color-4);
+  color: var(--color-3);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.empresa-item.selecionada {
+  border: 2px solid var(--color-3);
+  background-color: var(--color-1);
+} 
+
+
+/* INPUTS IDÊNTIFICAÇÃO */
+.input-titulo {
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  box-shadow: #010c0c3a 1px 2px 5px 1px;
+
+}
+
+.input-descricao {
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  resize: none;
+  box-shadow  : #010c0c3a 1px 2px 5px 1px;
+}
+
+.content .left .text-numeroRes{
+    font-size: 40px;
+}
+
+.content .left .subtext-numeroRes{
+  font-size: 14px;
+}
+
+.subtexto {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.lista-empresas-container {
+  background-color: var(--color-3);
+  color: var(--color-5);
+  border-radius: 10px;
+}
+
+.lista-empresas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.empresa-item {
+  margin: 10px;
+  position: relative;
+  padding: 12px 16px;
+  border-radius: 6px;
+  background-color: var(--color-3);
+  cursor: pointer;
+  color: var(--color-1);
+  transition: background-color 0.2s ease;
+}
+
+.empresa-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  background-color: #ccc;
+  opacity: 0.5;
+}
+
+.empresa-tempos {
+  position: relative;
+  padding: 12px 16px;
+  border-radius: 6px;
+  background-color: var(--color-3);
+  cursor: pointer;
+  color: var(--color-1);
+  transition: background-color 0.2s ease;
+}
+
+
+/* remove a linha do último item */
+.empresa-item:last-child::after {
+  content: none;
+}
+
+.empresa-item:hover {
+  background-color: var(--color-3);
+}
+
+.empresa-item.selecionada {
+  background-color: var(--color-1);
+  color: var(--color-3);
+}
+
+
+/* MODELOS */
+.modelo-opcao {
+  background: var(--color-3);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.modelo-opcao input[type="radio"] {
+  accent-color: var(--color-1); /* Cor do radio button */
+  width: 20px;
+  height: 20px;
+}
+
+.modelo-opcao label {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--color-5);
+}
+
+.botao-criar {
+  background-color: var(--color-1);
+  color: var(--color-3);
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  width: 80%;
+  cursor: pointer;
+  margin: 50px;
+}
+
+.botao-criar:hover {
+  background-color: var(--color-1); /* Um tom mais escuro no hover */
+}
+
+/* POPUP SUCESSO CRIAÇÃO */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background: var(--color-3);
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  width: 60%;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.title-popuplink{
+  color: var(--color-1);
+  font-size: 40px;
+}
+
+.subtitle-popuplink{
+  width: 70%;
+  text-align: justify;  
+  color: var(--color-5);
+  font-size: 15px;
+}
+
+.title-acesslink{
+  color: var(--color-4);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.block-acesslink{
+  margin-top: 10px;
+  background-color: var(--color-1);
+  width: 90%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.linkacess{
+  color: var(--color-3);
+  font-weight: 500;
+  text-decoration: none;
+  margin: 10px 10px 10px 10px;
+}
+
+.textexpiration-popuplink{
+  color: var(--color-5);
+  font-weight: 500;
+  text-align: start;
+  width: 70%;
+}
+
+
+
+/* MODAL RESPOSTAS SERVER */
+  .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background-color: var(--color-3);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-box p {
+  font-size: 18px;
+  color: var(--color-4);
+  margin-bottom: 20px;
+}
+
+
+.modal-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color-1);
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+@media (max-width: 900px) {
+  .all-content {
+    display: none;
+  }
+
+  .error {
+    display: block;
+  }
+
+  .error h1{
+    font-size: 30px;
+  }
+
+  .logo-erro {
+    text-align: center;
+  }
+
+  .logo-erro img {
+    width: 200px;
+  }
+
+}
+
+/* Estilo principal da sidebar */
+.leftbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background: var(--color-2);
+  transition: var(--tran-05);
+  z-index: 100;
+  padding-top: 3%;
+}
+
+/* Logo da sidebar */
+.leftbar img {
+  width: 3.5rem;
+  color: var(--color-3);
+}
+
+/* Sidebar fechada */
+.leftbar.close {
+  width: 88px;
+}
+
+/* Texto da sidebar */
+.leftbar .text {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-3);
+  transition: var(--tran-03);
+  white-space: nowrap;
+  opacity: 1;
+}
+
+.leftbar.close .text {
+  display: none;
+}
+
+/* Itens de lista do menu */
+.leftbar li {
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.leftbar:not(.close) li :not(.mode) {
+  margin-right: 13px;
+}
+
+/* Ícones dos itens */
+.leftbar li .icon {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+}
+
+/* Cores dos ícones e textos */
+.leftbar li .icon,
+.leftbar li .text {
+  color: var(--color-3);
+  transition: var(--tran-02);
+}
+
+/* Botão de toggle (menu hamburguer) */
+.leftbar .box {
+  position: relative;
+}
+
+.leftbar .box .toggle {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
+  height: 47px;
+  width: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-3);
+  font-size: 47px;
+  transition: var(--tran-03);
+  cursor: pointer;
+}
+
+.leftbar.close .box .toggle {
+  transform: translateY(-50%);
+}
+
+/* Container que segura o menu e o logo/config */
+.leftbar .menu-bar {
+  height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 🔧 Centraliza verticalmente */
+}
+
+/* Bloco do menu (ul + li) */
+.leftbar .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  /* 🔧 Ocupa espaço disponível para centralização */
+}
+
+/* Lista de links */
+.leftbar .menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  justify-content: center;
+  /* 🔧 Centraliza verticalmente os links */
+}
+
+/* Estilo dos links */
+.leftbar li a {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 3px;
+  transition: var(--tran-04);
+}
+
+/* Hover dos links */
+.leftbar li a:hover {
+  background: var(--color-1);
+}
+
+.leftbar li a:hover .icon,
+.leftbar li a:hover .text {
+  color: var(--color-3);
+}
+
+/* Espaço entre menu e parte inferior */
+.leftbar.close .menu-bar .mode {
+  border-radius: 10px;
+  position: relative;
+}
+
+.menu-bar .mode {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+/* Texto de config */
+.config .mode-text {
+  display: inline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .leftbar.close {
+    width: 80px;
+  }
+
+  .leftbar li .icon {
+    min-width: 45px;
+    font-size: 20px;
+  }
+
+  .leftbar .box .toggle {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .leftbar.close {
+    width: 60px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 997;
+  }
+
+  .leftbar.close .text {
+    display: none;
+  }
+
+  .leftbar.close .icon {
+    display: none;
+  }
+
+  .leftbar {
+    height: 100%;
+    width: 100%;
+    background: var(--color-2);
+    z-index: 1000;
+  }
+
+  .nav-link {
+    padding-left: 25%;
+  }
+
+  .config .mode-text {
+    display: none;
+  }
+
+  .leftbar li .icon {
+    font-size: 25px;
+  }
+
+  .leftbar .text {
+    font-size: 25px;
+  }
+
+  .leftbar.close .box .toggle {
+    font-size: 65px;
+  }
+
+  .leftbar .box .toggle {
+    position: relative;
+    top: 15px;
+    height: 50px;
+    width: 50px;
+    font-size: 65px;
+  }
+}
+
+.toggle-message {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  /* coloca à esquerda */
+  transform: translateY(-50%);
+  color: #333;
+  padding: 8px 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+  border-bottom: 1.5px solid white;
+  width: 75%;
+}
+
+.toggle-message.show {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* preto com baixa opacidade */
+  z-index: 90;
+  /* abaixo da sidebar que está com z-index: 100 */
+  display: none;
+  /* começa escondido */
+  transition: opacity 0.3s ease;
+}
+
+/* Quando a sidebar estiver aberta (sem .close), mostra a overlay */
+.leftbar:not(.close)~.overlay {
+  display: block;
+}

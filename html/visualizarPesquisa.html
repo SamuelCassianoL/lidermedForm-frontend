@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Pesquisa</title>
+  <link rel="stylesheet" href="../css/visualizarPesquisa.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="all-main">
+        <!-- CABEÇALHO -->
+            <header>
+                <p class="right-titleheader">
+                    LíderMed Forms
+                </p>
+
+                <div class="left-header">
+                    <div class="expiration-left">
+                        <i class="text-expirationleft">Expiração:</i>
+                        <h3 class="value-expirationleft" id="data-expiracao">Data da expiração</h3>
+                    </div>
+                    <div class="division"></div>
+                    <div class="company-left" id="nome-empresa">Nome empresa</div>
+                </div>
+            </header>   
+            <br>    
+
+            <!-- TÍTULO E DESCRIÇÃO EMPRESA -->
+            <h1 id="titulo" class="titulo-pesquisa">Carregando...</h1>
+            <p id="descricao" class="descricao-pesquisa"></p>
+            <br>
+            <p class="descricao-pesquisa">Marque o item que melhor que corresponde a afirmação:</p>
+            <br>
+
+            <!-- numeração -->
+            <div class="numeracao-perguntas">
+                <div class="item-numeracaoperguntas">
+                    <h2>1</h2>
+                    <h4 class="valor-itemnumeracao">Nunca</h4>
+                </div>
+
+                <div class="item-numeracaoperguntas">
+                    <h2>2</h2>
+                    <h4 class="valor-itemnumeracao">Raramente</h4>
+                </div>
+
+                <div class="item-numeracaoperguntas">
+                    <h2>3</h2>
+                    <h4 class="valor-itemnumeracao">Ás vezes</h4>
+                </div>
+
+                <div class="item-numeracaoperguntas">
+                    <h2>4</h2>
+                    <h4 class="valor-itemnumeracao">Frequentemente</h4>
+                </div>
+
+                <div class="item-numeracaoperguntas">
+                    <h2>5</h2>
+                    <h4 class="valor-itemnumeracao">Sempre</h4>
+                </div>
+            </div>
+            <br>
+            <hr>
+
+            <br>
+            <div id="perguntas"></div>
+
+
+            <!-- MODAL RESPOSTAS SERVER -->
+            <div id="modal-overlay" class="modal-overlay hidden">
+                <div class="modal-box" id="modal-box">
+                    <p id="modal-message">Mensagem</p>
+                    <button id="modal-close">OK</button>
+                </div>
+            </div>
+        </div>
+
+
+
+      <!-- Alerta erro screen -->
+  <div class="error">
+    <div class="logo-erro">
+      <img src="../img/error.svg" alt="Logo" />
+    </div>
+    <h1>Dispositivo incompativel</h1>
+    <p>
+      Seu dispositivo ainda não possui suporte para este conteúdo.<br>
+      Suporte disponível em breve.
+    </p>
+  </div>
+
+    <script src="../js/modal.js"></script>
+  <script src="../js/visualizarPesquisa.js"></script>
+</body>
+</html>

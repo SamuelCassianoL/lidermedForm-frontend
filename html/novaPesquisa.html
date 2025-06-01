@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar empresas</title>
+    <link rel="stylesheet" href="../css/novaPesquisa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="all-content">
+                <!-- leftbar -->
+        <nav class="leftbar close">
+            <div class="box">
+                <img src="../img/menu.svg" class="bx bx-menu toggle">
+                <div class="toggle-message text">LiderMed Forms</div>
+            </div>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="dashboard.html">
+                                <img src="../img/dash.svg" class="fa-solid fa-house icon">
+                                <span class="text nav-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="gerenciarEmpresas.html">
+                                <img src="../img/empresa.svg" class="fa-solid fa-house icon">
+                                <span class="text nav-text">Empresas</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="novaPesquisa.html">
+                                <img src="../img/lupa.svg" class="fa-solid fa-house icon">
+                                <span class="text nav-text">Pesquisas</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-contet">
+                    <li class="icon mode">
+                        <img src="../img/logo2.svg" alt="">
+                    </li>
+                </div>
+            </div>
+        </nav>
+        <div class="overlay"></div> <!-- NOVO: escurece a tela -->
+
+        <div class="container">
+            <h1>Criar nova pesquisa</h1>
+            <p>Crie novas pesquisas para implementação em nas empresas. Selecione devidamente dos itens abaixo para a criação pesquisa:</p>
+
+            <hr>
+
+            <div class="content">
+                <div class="left">
+                    <h2>Identificação</h2>
+                    <p class="subtexto">Adicione curtas credências para criar uma pesquisa e identificá-la novamente</p>
+                    <br>
+                    <input type="text" id="input-titulo" class="input-titulo" placeholder="Insira um título curto para a pesquisa..." maxlength="50" required>
+                </div>
+                <div class="right">
+                    <textarea id="input-descricao" class="input-descricao" placeholder="Insira uma descrição com no máximo 255 caracteres..." maxlength="255" required></textarea>
+                </div>
+            </div>
+
+
+            <div class="content">
+                <div class="left">
+                    <h2>Empresa</h2>
+                    <p class="subtexto">Selecione a respectiva empresa cadastrada no sistema para compor a pesquisa</p>
+                </div>
+                <div class="right">
+                    <div class="lista-empresas-container">
+                        <div id="lista-empresas" class="lista-empresas">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <h1>Modelo de pesquisa</h1>
+            <p>Selecione o modelo de pesquisa que melhor se aplique à pesquisa que está sendo gerada</p>
+            <br>
+            <div class="content">
+                <div class="left" id="modelos-container">
+
+                </div>
+            </div>
+        
+
+            <div class="content">
+                <div class="left">
+                    <h2>Expiração</h2>
+                    <p>Defina o tempo de expiração em que a pesquisa estará disponível</p>
+                </div>
+                <div class="right">
+                    <div id="lista-tempos" class="lista-tempos"></div>
+                </div>
+            </div>
+
+            
+            <div class="content">
+                <div class="left">
+                    <h2 class="text-numeroRes">Número de respostas</h2>
+                    <p class="subtext-numeroRes">Defina a quantidade de colaboradores destinada a responder a pesquisa criada</p>
+                </div>
+                <div class="right">
+                    <input type="number" id="input-max-sub" placeholder="Quantidade de envio por colaborador" required min="1">
+                </div>
+            </div>
+
+                <button id="btn-criar-pesquisa" class="botao-criar">Criar pesquisa</button>
+
+            <div class="logo">
+                <img src="../img/logo.svg" alt="Logo" />
+            </div>
+
+            <div id="modal-overlay" class="modal-overlay hidden">
+                <div class="modal-box" id="modal-box">
+                    <p id="modal-message">Mensagem</p>
+                    <button id="modal-close">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="error">
+            <div class="logo-erro">
+                <img src="../img/error.svg" alt="Logo" />
+            </div>
+            <h1>Dispositivo incompativel</h1>
+            <p>
+                Seu dispositivo ainda não possui suporte para este conteúdo.
+                <br>
+                Suporte disponivel em breve.
+            </p>
+        </div>
+
+  
+
+
+  <!-- Popup de link da pesquisa criada -->
+    <div id="popup-link" class="popup hidden">
+        <div class="popup-content">
+            <span id="close-popup-link" class="close-btn">&times;</span>
+            <h2 class="title-popuplink" >Pesquisa criada com sucesso!</h2>
+            <br>
+            <p class="subtitle-popuplink">Os resultados e detalhes da pesquisa estão disponíveis no menu em <strong>dashboard</strong>, assim como dados, estastísticas e respostas. <strong>Abaixo, o link para implementação</strong> da pesquisa:</p>
+            <br>
+            <h4 class="title-acesslink">Acesso a pesquisa:</h4>
+            <div class="block-acesslink">
+                <a id="link-pesquisa" href="#" class="linkacess" target="_blank">Abrir pesquisa</a>
+            </div>
+            <br><br>
+            <h4 class="textexpiration-popuplink">
+                Essa pesquisa poderá ser acessada pelos usuários e respondida até o dia 23/04/2025 ás 23:50!
+            </h4>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/novaPesquisa.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/nav.js"> </script>
+</body>
+
+</html>

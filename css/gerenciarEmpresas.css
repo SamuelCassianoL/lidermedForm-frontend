@@ -1,0 +1,566 @@
+:root {
+  --color-1: #43A7A5;
+  --color-2: #52CADA;
+  --color-3: #EFFAFD;
+  --color-4: #237775;
+  --color-5: #011212;
+  --tran-02: 0.2s ease;
+  --tran-03: 0.3s ease;
+  --tran-04: 0.4s ease;
+  --tran-05: 0.5s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: var(--color-3);
+  display: flex;
+  justify-content: start;
+}
+
+.container {
+  max-width: 80%;
+  margin-top: 20px;
+  margin-left: 120px;
+}
+
+h1 {
+  font-size: 70px;
+  color: var(--color-1);
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: var(--color-5);
+}
+
+hr {
+  margin: 40px;
+}
+
+.header-container p{
+  color: var(--color-1);
+  font-size: 20px;
+}
+
+.logo {
+  position: fixed;  
+  bottom: 40px;        
+  right: 40px;         
+  z-index: 100;        
+}
+
+.logo img {
+  width: 40px;         
+}
+
+
+/* ERRO DE RESOLUÇÃO */
+.logo-erro {
+  margin-top: 40px;
+}
+
+.logo-erro img {
+  width: 40px;
+}
+
+.error {
+  display: none;
+  margin: auto;
+  text-align: center;
+}
+
+
+
+/* CONTAINER CRIAÇÃO DE EMPRESA */
+.createCompanie-container {
+  background-color: var(--color-1);
+  color: var(--color-3);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-bottom: 30px;
+  align-items: center;
+  max-height: 500px;
+  box-shadow: #010c0c3a 1px 2px 10px 1px;
+}
+
+.createCompanie-container p {
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: var(--color-3);
+}
+
+form {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+}
+
+.right input{
+  padding: 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.left{
+  width: 60%;
+}
+
+.left h2 {
+  font-size: 60px;
+  display: flex;
+  line-height: 50px;
+}
+
+.left p {
+  width: 80%;
+  font-size: 20px;
+  color: var(--color-3);
+}
+
+.left p {
+  width: 80%;
+  font-size: 20px;
+  color: var(--color-3);
+}
+
+.left button{
+  padding: 10px;
+  background-color: var(--color-3);
+  color: var(--color-1);
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+}
+
+/* CONTAINER DELETAR EMPRESA */
+.deleteCompanie-container {
+  max-height: 500px;
+  background-color: var(--color-1);
+  color: var(--color-3);
+  border-radius: 20px;
+  text-align: left;
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: #010c0c3a 1px 2px 10px 1px;
+
+}
+
+.deleteCompanie-container .right {
+  scrollbar-color: transparent;
+  width: 40%;
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.empresa-item {
+  background-color: var(--color-3);
+  color: var(--color-1);
+  font-size: 20px;
+  font-weight: 400;
+  padding: 12px;
+  margin: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.empresa-item.selecionada {
+  border: 2px solid var(--color-3);
+  background-color: #effafd1e;
+  color: var(--color-3);
+}
+
+.deleteCompanie-container .right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.deleteCompanie-container .right::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.deleteCompanie-container .right::-webkit-scrollbar-thumb {
+  background-color: var(--color-3);
+  border-radius: 10px;
+  border: 2px solid var(--color-1); /* cria um espaçamento ao redor */
+}
+
+
+
+
+/* MODAL RESPOSTAS SERVER */
+  .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background-color: var(--color-3);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-box p {
+  font-size: 18px;
+  color: var(--color-4);
+  margin-bottom: 20px;
+}
+
+
+.modal-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color-1);
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+  .all-content {
+    display: none;
+  }
+
+  .error {
+    display: block;
+    font-size: 20px;
+  }
+
+  .error h1{
+    font-size: 20px;
+  }
+
+  .logo-erro {
+    text-align: center;
+  }
+
+  .logo-erro img {
+    width: 200px;
+  }
+
+}
+
+
+
+/* Estilo principal da sidebar */
+.leftbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background: var(--color-2);
+  transition: var(--tran-05);
+  z-index: 100;
+  padding-top: 3%;
+}
+
+/* Logo da sidebar */
+.leftbar img {
+  width: 3.5rem;
+  color: var(--color-3);
+}
+
+/* Sidebar fechada */
+.leftbar.close {
+  width: 88px;
+}
+
+/* Texto da sidebar */
+.leftbar .text {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-3);
+  transition: var(--tran-03);
+  white-space: nowrap;
+  opacity: 1;
+}
+
+.leftbar.close .text {
+  display: none;
+}
+
+/* Itens de lista do menu */
+.leftbar li {
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.leftbar:not(.close) li :not(.mode) {
+  margin-right: 13px;
+}
+
+/* Ícones dos itens */
+.leftbar li .icon {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+}
+
+/* Cores dos ícones e textos */
+.leftbar li .icon,
+.leftbar li .text {
+  color: var(--color-3);
+  transition: var(--tran-02);
+}
+
+/* Botão de toggle (menu hamburguer) */
+.leftbar .box {
+  position: relative;
+}
+
+.leftbar .box .toggle {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
+  height: 47px;
+  width: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-3);
+  font-size: 47px;
+  transition: var(--tran-03);
+  cursor: pointer;
+}
+
+.leftbar.close .box .toggle {
+  transform: translateY(-50%);
+}
+
+/* Container que segura o menu e o logo/config */
+.leftbar .menu-bar {
+  height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 🔧 Centraliza verticalmente */
+}
+
+/* Bloco do menu (ul + li) */
+.leftbar .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  /* 🔧 Ocupa espaço disponível para centralização */
+}
+
+/* Lista de links */
+.leftbar .menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  justify-content: center;
+  /* 🔧 Centraliza verticalmente os links */
+}
+
+/* Estilo dos links */
+.leftbar li a {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 3px;
+  transition: var(--tran-04);
+}
+
+/* Hover dos links */
+.leftbar li a:hover {
+  background: var(--color-1);
+}
+
+.leftbar li a:hover .icon,
+.leftbar li a:hover .text {
+  color: var(--color-3);
+}
+
+/* Espaço entre menu e parte inferior */
+.leftbar.close .menu-bar .mode {
+  border-radius: 10px;
+  position: relative;
+}
+
+.menu-bar .mode {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+/* Texto de config */
+.config .mode-text {
+  display: inline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .leftbar.close {
+    width: 80px;
+  }
+
+  .leftbar li .icon {
+    min-width: 45px;
+    font-size: 20px;
+  }
+
+  .leftbar .box .toggle {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .leftbar.close {
+    width: 60px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 997;
+  }
+
+  .leftbar.close .text {
+    display: none;
+  }
+
+  .leftbar.close .icon {
+    display: none;
+  }
+
+  .leftbar {
+    height: 100%;
+    width: 100%;
+    background: var(--color-2);
+    z-index: 1000;
+  }
+
+  .nav-link {
+    padding-left: 25%;
+  }
+
+  .config .mode-text {
+    display: none;
+  }
+
+  .leftbar li .icon {
+    font-size: 25px;
+  }
+
+  .leftbar .text {
+    font-size: 25px;
+  }
+
+  .leftbar.close .box .toggle {
+    font-size: 65px;
+  }
+
+  .leftbar .box .toggle {
+    position: relative;
+    top: 15px;
+    height: 50px;
+    width: 50px;
+    font-size: 65px;
+  }
+}
+
+.toggle-message {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  color: #333;
+  padding: 8px 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+  border-bottom: 1.5px solid white;
+  width: 75%;
+}
+
+.toggle-message.show {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* preto com baixa opacidade */
+  z-index: 90;
+  /* abaixo da sidebar que está com z-index: 100 */
+  display: none;
+  /* começa escondido */
+  transition: opacity 0.3s ease;
+}
+
+/* Quando a sidebar estiver aberta (sem .close), mostra a overlay */
+.leftbar:not(.close)~.overlay {
+  display: block;
+}

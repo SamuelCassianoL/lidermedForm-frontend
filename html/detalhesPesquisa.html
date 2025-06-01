@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Gerenciar empresas</title>
+      <link rel="stylesheet" href="../css/detalhesPesquisa.css">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+      <!-- leftbar -->
+      <nav class="leftbar close">
+            <div class="box">
+                  <img src="../img/menu.svg" class="bx bx-menu toggle">
+                  <div class="toggle-message text">LiderMed Forms</div> <!-- NOVO AQUI -->
+            </div>
+
+            <div class="menu-bar">
+                  <div class="menu">
+                        <ul class="menu-links">
+                              <li class="nav-link">
+                                    <a href="dashboard.html">
+                                          <img src="../img/dash.svg" class="fa-solid fa-house icon">
+                                          <span class="text nav-text">Dashboard</span>
+                                    </a>
+                              </li>
+                              <li class="nav-link">
+                                    <a href="gerenciarEmpresas.html">
+                                          <img src="../img/empresa.svg" class="fa-solid fa-house icon">
+                                          <span class="text nav-text">Empresas</span>
+                                    </a>
+                              </li>
+                              <li class="nav-link">
+                                    <a href="novaPesquisa.html">
+                                          <img src="../img/lupa.svg" class="fa-solid fa-house icon">
+                                          <span class="text nav-text">Pesquisas</span>
+                                    </a>
+                              </li>
+                        </ul>
+                  </div>
+                  <div class="bottom-contet">
+                        <li class="icon mode">
+                              <img src="../img/logo2.svg" alt="">
+                        </li>
+                  </div>
+            </div>
+      </nav>
+      <div class="overlay"></div> <!-- NOVO: escurece a tela -->
+
+
+      <div class="container">
+            <div class="header">
+                  <div class="start">
+                        <h1>Ambiente de Trabalho</h1>
+                        <p>Descrição respectivo formulário, no caso, descrição do formulário ambiente de trabalho,
+                              essa é a descrição</p>
+                  </div>
+                  <div>
+                        <h1 class="number">82</h1>
+                        <p>Respostas</p>
+                  </div>
+            </div>
+            <hr>
+
+            <!-- BOX 1 -->
+
+            <div class="result-box">
+                  <h3 class="result-question">
+                        O número de trabalhadores é suficiente para a execução das tarefas
+                  </h3>
+
+                  <div class="result-bar">
+                        <span class="bar-label">Nota 1</span>
+                        <div class="bar-track">
+                              <div class="bar-fill" style="width: 70%"></div>
+                        </div>
+                        <span class="bar-value">45 - 70%</span>
+                  </div>
+
+                  <div class="result-bar">
+                        <span class="bar-label">Nota 2</span>
+                        <div class="bar-track">
+                              <div class="bar-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="bar-value">52 - 82%</span>
+                  </div>
+
+                  <div class="result-bar">
+                        <span class="bar-label">Nota 3</span>
+                        <div class="bar-track">
+                              <div class="bar-fill" style="width: 40%"></div>
+                        </div>
+                        <span class="bar-value">22 - 40%</span>
+                  </div>
+
+                  <div class="result-bar">
+                        <span class="bar-label">Nota 4</span>
+                        <div class="bar-track">
+                              <div class="bar-fill" style="width: 25%"></div>
+                        </div>
+                        <span class="bar-value">12 - 25%</span>
+                  </div>
+
+                  <div class="result-bar">
+                        <span class="bar-label">Nota 5</span>
+                        <div class="bar-track">
+                              <div class="bar-fill" style="width: 15%"></div>
+                        </div>
+                        <span class="bar-value">8 - 15%</span>
+                  </div>
+            </div>
+
+            <!-- BOX 2 -->
+
+            <div class="result-box">
+                  <h3 class="result-question">
+                        O número de trabalhadores é suficiente para a execução das tarefas
+                  </h3>
+
+                  <div class="result-bar">
+                        <span class="bar-label">Nota 1</span>
+                        <div class="bar-track">
+                              <div class="bar-fill" style="width: 70%"></div>
+                        </div>
+                        <span class="bar-value">45 - 70%</span>
+                  </div>
+
+                  <div class="result-bar">
+                        <span class="bar-label">Nota 2</span>
+                        <div class="bar-track">
+                              <div class="bar-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="bar-value">52 - 82%</span>
+                  </div>
+
+                  <div class="result-bar">
+                        <span class="bar-label">Nota 3</span>
+                        <div class="bar-track">
+                              <div class="bar-fill" style="width: 40%"></div>
+                        </div>
+                        <span class="bar-value">22 - 40%</span>
+                  </div>
+
+                  <div class="result-bar">
+                        <span class="bar-label">Nota 4</span>
+                        <div class="bar-track">
+                              <div class="bar-fill" style="width: 25%"></div>
+                        </div>
+                        <span class="bar-value">12 - 25%</span>
+                  </div>
+
+                  <div class="result-bar">
+                        <span class="bar-label">Nota 5</span>
+                        <div class="bar-track">
+                              <div class="bar-fill" style="width: 15%"></div>
+                        </div>
+                        <span class="bar-value">8 - 15%</span>
+                  </div>
+            </div>
+
+
+            <!-- ERRO -->
+
+            <div class="error">
+                  <div class="logo">
+                        <img src="../img/error.svg" alt="Logo" />
+                  </div>
+                  <h1>Dispositivo incompativel</h1>
+                  <p>
+                        Seu dispositivo ainda não possui suporte para este conteúdo.
+                        <br>
+                        Suporte disponivel em breve.
+                  </p>
+      <div class="error">
+            <div class="logo-erro">
+                  <img src="../img/error.svg" alt="Logo" />
+            </div>
+            <script src="../js/dashboard.js"></script>
+            <script src="../js/nav.js"> </script>
+
+</body>
+
+</html>

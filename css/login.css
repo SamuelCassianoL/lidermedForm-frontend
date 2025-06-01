@@ -1,0 +1,120 @@
+/* Importando fonte profissional */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bgcolorPrimaria: #39A7A5;
+    --bgcolorSegundaria: #1E6777;
+    --black: rgba(0, 0, 0, 0.2);
+    --subtitle: #666;
+    --label: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(65deg, var(--bgcolorSegundaria), var(--bgcolorPrimaria));
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+body .logo {
+    margin: 2% 0% 0% 4%;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background: #FFFDFF;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px var(--black);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+}
+
+h2 {
+    color: var(--bgcolorSegundaria);
+    font-weight: 600;
+}
+
+p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--label);
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2.5px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    background: var(--bgcolorSegundaria);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 2.5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--bgcolorPrimaria);
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    color: var(--bgcolorSegundaria);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+.text{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.text p{
+    font-size: 95%;
+    font-weight: 100;
+}
