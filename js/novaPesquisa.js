@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // 1) Carregar Empresas (modal automático para erros críticos)
   async function carregarEmpresas() {
     try {
-      const res = await auth.authFetch('http://31.97.131.14/companies/list');
+      const res = await auth.authFetch('https://lidermedforms.com.br/companies/list');
       const empresas = await res.json();
       listaEmpresasEl.innerHTML = '';
       empresas.forEach(empresa => {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // 2) Carregar Modelos (idem)
   async function carregarModelos() {
     try {
-      const res = await auth.authFetch('http://31.97.131.14/api/forms/form-models/');
+      const res = await auth.authFetch('https://lidermedforms.com.br/api/forms/form-models/');
       const modelos = await res.json();
       modelosContainerEl.innerHTML = '';
       modelos.forEach(modelo => {
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
       // suppress400→captura JSON de validação, sem modal automático
       const res = await auth.authFetch(
-        'http://31.97.131.14/api/forms/surveys/',
+        'https://lidermedforms.com.br/api/forms/surveys/',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

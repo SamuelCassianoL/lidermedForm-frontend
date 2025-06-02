@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // 1) Carrega e exibe lista de empresas (modal automático em 401/500/etc)
   async function carregarEmpresas() {
     try {
-      const res = await auth.authFetch('http://31.97.131.14/companies/list');
+      const res = await auth.authFetch('https://lidermedforms.com.br/companies/list');
       const data = await res.json();
       empresas = data;
       preencherLista();
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!confirm(`Deseja realmente desativar "${empresaSelecionada.nome}"?`)) return;
 
     try {
-      const url = `http://31.97.131.14/companies/desactivate/${empresaSelecionada.id}/`;
+      const url = `https://lidermedforms.com.br/companies/desactivate/${empresaSelecionada.id}/`;
       const res = await auth.authFetch(url, { method: 'DELETE' });
       // Se não for ok, authFetch já mostrou modal e lançou erro
       // Se chegou aqui, status 2xx
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
       // suppress400: true → o authFetch NÃO mostra modal em 400, retorna o res
       const res = await auth.authFetch(
-        'http://31.97.131.14/companies/create/',
+        'https://lidermedforms.com.br/companies/create/',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

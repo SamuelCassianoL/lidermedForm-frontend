@@ -28,7 +28,7 @@ function showSection(id) {
 async function fetchCompanies() {
   try {
     // modal automático para 401/5xx/rede
-    const res = await auth.authFetch('http://31.97.131.14/companies/list');
+    const res = await auth.authFetch('https://lidermedforms.com.br/companies/list');
     // Se status 400, não faz sentido aqui → trata nos catch
     if (!res.ok) throw new Error('Erro ao carregar empresas.');
     const companies = await res.json();
@@ -58,7 +58,7 @@ async function fetchSurveys(companyId) {
   try {
     // modal automático para 401/5xx/rede
     const res = await auth.authFetch(
-      `http://31.97.131.14/api/forms/surveys/company/${companyId}`
+      `https://lidermedforms.com.br/api/forms/surveys/company/${companyId}`
     );
     if (!res.ok) throw new Error('Erro ao carregar pesquisas da empresa.');
     const surveys = await res.json();
@@ -98,7 +98,7 @@ async function fetchSurveyResults(surveyId) {
   try {
     // modal automático para 401/5xx/rede
     const res = await auth.authFetch(
-      `http://31.97.131.14/api/dashboard/survey/${surveyId}`
+      `https://lidermedforms.com.br/api/dashboard/survey/${surveyId}`
     );
     if (!res.ok) {
       // se 404, pode querer mensagem do backend

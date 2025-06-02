@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   
     try {
-      const res = await fetch(`http://31.97.131.14/api/forms/surveys/${link}/`, {
+      const res = await fetch(`https://lidermedforms.com.br/api/forms/surveys/${link}/`, {
         headers: { 'Content-Type': 'application/json' }
       });
   
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
   
       try {
-        const envio = await fetch('http://31.97.131.14/api/forms/answers/', {
+        const envio = await fetch('https://lidermedforms.com.br/api/forms/answers/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ survey: survey.id, answers: respostas })
