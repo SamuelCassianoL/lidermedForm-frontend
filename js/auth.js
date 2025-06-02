@@ -1,4 +1,4 @@
-    const API_BASE = 'http://31.97.131.14/api';
+    const API_BASE = 'https://lidermedforms.com.br/api';
 
     function saveTokens({ access, refresh }) {
         localStorage.setItem('access', access);
